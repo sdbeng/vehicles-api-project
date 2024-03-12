@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChatHistory">
+    <chats>
+      <list>
+        <chat>
+          <accountId value="VXNlcjozMTA1NzY=" />
+          <internalId value="7cc0540b-d374-40ba-a12a-166739b6c18e" />
+          <llm>
+            <llm>
+              <model value="anthropic/claude-2.0" />
+              <provider value="Anthropic" />
+              <title value="Claude 2.0" />
+            </llm>
+          </llm>
+          <messages>
+            <list>
+              <message>
+                <speaker value="HUMAN" />
+                <text value="I'd like to add a new module to my project to act as a eureka server rather with an older version of Spring boot starter, but if I create a new Spring Boot application from the start.spring.io it won't give me a choice to use an older version. How to solve this?" />
+              </message>
+              <message>
+                <speaker value="ASSISTANT" />
+                <text value=" Here are a few options to create a new Spring Boot module with an older version in an existing project:&#10;&#10;1. Manually create the module and configure the Spring Boot dependencies in the pom.xml with the desired version. For example:&#10;&#10;```xml&#10;&lt;dependency&gt;&#10;  &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10;  &lt;artifactId&gt;spring-boot-starter&lt;/artifactId&gt;&#10;  &lt;version&gt;1.5.10.RELEASE&lt;/version&gt;&#10;&lt;/dependency&gt;&#10;```&#10;&#10;2. Use the Spring Initializr to generate a new project with the old version, then copy over the pom.xml and src code into your project structure.&#10;&#10;3. Use the Spring Boot Maven plugin to generate the module. You can specify the Spring Boot version like:&#10;&#10;```xml&#10;&lt;plugin&gt;&#10;  &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#10;  &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;&#10;  &lt;version&gt;1.5.10.RELEASE&lt;/version&gt;&#10;  &lt;executions&gt;&#10;    &lt;execution&gt;&#10;      &lt;goals&gt;&#10;        &lt;goal&gt;repackage&lt;/goal&gt;&#10;      &lt;/goals&gt;&#10;    &lt;/execution&gt;&#10;  &lt;/executions&gt;&#10;&lt;/plugin&gt;&#10;```&#10;&#10;4. Clone an older version of spring-boot-sample-project from GitHub and copy over the module contents.&#10;&#10;So in summary, you have a few options to manually create or generate the module with specific versions rather than using start.spring.io." />
+              </message>
+            </list>
+          </messages>
+          <updatedAt value="2024-03-12T11:31:21.542025" />
+        </chat>
+        <chat>
+          <accountId value="VXNlcjozMTA1NzY=" />
+          <internalId value="a55716ea-3a07-456c-bc6e-32005b17862a" />
+          <llm>
+            <llm>
+              <model value="anthropic/claude-2.0" />
+              <provider value="Anthropic" />
+              <title value="Claude 2.0" />
+            </llm>
+          </llm>
+        </chat>
+      </list>
+    </chats>
+  </component>
+</project>
