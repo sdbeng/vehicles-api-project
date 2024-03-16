@@ -102,8 +102,6 @@ class CarController {
         Car updatedCar = carService.save(car);
         Resource<Car> assembledCar = assembler.toResource(updatedCar);
         return ResponseEntity.ok(assembledCar);
-//        Resource<Car> resource = assembler.toResource(new Car());
-//        return ResponseEntity.ok(resource);
     }
 
     /**
@@ -116,6 +114,7 @@ class CarController {
         /**
          * TODO: Use the Car Service to delete the requested vehicle.
          */
+        carService.delete(id);
         return ResponseEntity.noContent().build();
     }
 }
