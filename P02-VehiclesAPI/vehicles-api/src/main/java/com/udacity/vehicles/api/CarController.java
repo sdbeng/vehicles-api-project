@@ -64,7 +64,6 @@ class CarController {
          *   Update the first line as part of the above implementing.
          */
         return assembler.toResource(carService.findById(id));
-//        return assembler.toResource(new Car());
     }
 
     /**
@@ -80,12 +79,8 @@ class CarController {
          * TODO: Use the `assembler` on that saved car and return as part of the response.
          *   Update the first line as part of the above implementing.
          */
-        //call the save method from the car service to save the inputted car
         Car savedCar = carService.save(car);
-        //use the assembler on the saved car and return as part of the response
         Resource<Car> assembledCar = assembler.toResource(savedCar);
-//        Resource<Car> resource = assembler.toResource(new Car());
-//        return ResponseEntity.created(new URI(resource.getId().expand().getHref())).body(resource);
         return ResponseEntity.created(new URI(assembledCar.getId().expand().getHref())).body(assembledCar);
     }
 
